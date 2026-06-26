@@ -15,9 +15,15 @@ require_once 'MahasiswaBidikMisi.php';
 require_once 'MahasiswaPrestasi.php';
 
 // ============================================================
-// 2. KONEKSI DATABASE MENGGUNAKAN PDO
+// 2. KONEKSI DATABASE MENGGUNAKAN PDO (SINGLETON)
 // ============================================================
 require_once 'koneksi.php';
+
+// Mengambil instance tunggal dari class Database
+$db = Database::getInstance();
+
+// Mendapatkan objek koneksi PDO
+$pdo = $db->getConnection();
 
 // ============================================================
 // 3. QUERY & MAPPING KE OBJEK (POLIMORFISME)
