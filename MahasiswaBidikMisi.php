@@ -13,9 +13,9 @@ class MahasiswaBidikMisi extends Mahasiswa {
         $this->danaSakuSubsidi = $danaSakuSubsidi;
     }
 
-    // Implementasi metode hitungTagihanSemester
+    // Implementasi Method Overriding: Mahasiswa Bidikmisi
     public function hitungTagihanSemester() {
-        // Mahasiswa Bidikmisi dibebaskan dari biaya UKT (0 Rupiah)
+        // total tagihan = 0
         return 0;
     }
 

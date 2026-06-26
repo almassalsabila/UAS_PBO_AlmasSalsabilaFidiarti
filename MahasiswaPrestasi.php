@@ -13,10 +13,11 @@ class MahasiswaPrestasi extends Mahasiswa {
         $this->minimalIpkSyarat = $minimalIpkSyarat;
     }
 
-    // Implementasi metode hitungTagihanSemester
+    // Implementasi Method Overriding: Mahasiswa Prestasi
     public function hitungTagihanSemester() {
-        // Misalkan skema mahasiswa prestasi mendapatkan potongan UKT 50%
-        return $this->tarifUktNominal * 0.5;
+        // total tagihan = tarifUktNominal * 0.25
+        $totalTagihan = $this->tarifUktNominal * 0.25;
+        return $totalTagihan;
     }
 
     // Implementasi metode tampilkanSpesifikasiAkademik

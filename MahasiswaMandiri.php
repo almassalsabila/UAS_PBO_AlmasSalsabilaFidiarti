@@ -13,10 +13,11 @@ class MahasiswaMandiri extends Mahasiswa {
         $this->namaWali = $namaWali;
     }
 
-    // Implementasi metode hitungTagihanSemester
+    // Implementasi Method Overriding: Mahasiswa Mandiri
     public function hitungTagihanSemester() {
-        // Mahasiswa Mandiri membayar UKT penuh sesuai tarif nominal
-        return $this->tarifUktNominal;
+        // total tagihan = tarifUktNominal + 100000
+        $totalTagihan = $this->tarifUktNominal + 100000;
+        return $totalTagihan;
     }
 
     // Implementasi metode tampilkanSpesifikasiAkademik
