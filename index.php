@@ -17,21 +17,7 @@ require_once 'MahasiswaPrestasi.php';
 // ============================================================
 // 2. KONEKSI DATABASE MENGGUNAKAN PDO
 // ============================================================
-$host   = 'localhost';
-$dbname = 'db_uas_pbo_trpl1a_almassalsabilafidiarti';
-$user   = 'root';
-$pass   = '';
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    die("<div style='padding:2rem;text-align:center;color:#DC9B9B;font-family:sans-serif;'>
-            <h2>⚠ Koneksi Database Gagal</h2>
-            <p>" . htmlspecialchars($e->getMessage()) . "</p>
-         </div>");
-}
+require_once 'koneksi.php';
 
 // ============================================================
 // 3. QUERY & MAPPING KE OBJEK (POLIMORFISME)
